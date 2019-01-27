@@ -1,0 +1,14 @@
+@font-face {
+	font-family: 'IndieFlower';
+	src: url('./IndieFlower.ttf') format('trueType');
+}
+@font-face {
+	font-family: 'Pacifico';
+	src: url('./Pacifico-Regular.ttf') format('trueType');
+}
+p, h1 {
+	font-family: "IndieFlower"
+}
+.Pacifico {
+	font-family: "Pacifico"
+}
