@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>overflow-demo</title>
+	<style>
+		.size {
+			width: 200px;
+			height: 100px;
+		}
+		.margin100 {
+			margin-top: 120px; 
+		}
+		.overflow-auto {
+			overflow: auto;
+			outline: 1px solid pink;
+		}
+		.overflow-visible {
+			/* 默认值。内容不会被修剪，会呈现在元素框之外 */
+			overflow: visible;
+			outline: 1px solid blue;
+		}
+		.overflow-hidden {
+			/* 内容会被修剪，并且其余内容是不可见的 */
+			overflow: hidden;
+			outline: 1px solid red;
+		}
+		.overflow-scroll {
+			/* 内容会被修剪，但是浏览器会显示滚动条以便查看其余的内容 */
+			overflow: scroll;
+			margin-top: 20px;
+			outline: 1px solid yellow;
+		}
+		/* demo没效果 */
+		.overflow-x-scroll {
+			/* 内容会被修剪，但是浏览器会显示滚动条以便查看其余的内容 */
+			overflow-x: no-display;
+			outline: 1px solid yellow;
+		}
+	</style>
+</head>
+<body>
+	<div class="size overflow-auto">
+		所有主流浏览器都支持 overflow 属性。这个属性定义溢出元素内容区的内容会如何处理。如果值为 scroll，不论是否需要，用户代理都会提供一种滚动机制。因此，有可能即使元素框中可以放下所有内容也会出现滚动条。
+	</div>
+	<div class="size overflow-visible">
+		所有主流浏览器都支持 overflow 属性。这个属性定义溢出元素内容区的内容会如何处理。如果值为 scroll，不论是否需要，用户代理都会提供一种滚动机制。因此，有可能即使元素框中可以放下所有内容也会出现滚动条。
+	</div>
+	<div class="size margin100 overflow-hidden">
+		所有主流浏览器都支持 overflow 属性。这个属性定义溢出元素内容区的内容会如何处理。如果值为 scroll，不论是否需要，用户代理都会提供一种滚动机制。因此，有可能即使元素框中可以放下所有内容也会出现滚动条。
+	</div>
+	<div class="size overflow-scroll">
+		所有主流浏览器都支持 overflow 属性。这个属性定义溢出元素内容区的内容会如何处理。如果值为 scroll，不论是否需要，用户代理都会提供一种滚动机制。因此，有可能即使元素框中可以放下所有内容也会出现滚动条。
+	</div>
+	<div class="size overflow-visible">
+		<p style="overflow: inherit;">所有主流浏览器都支持 overflow 属性。这个属性定义溢出元素内容区的内容会如何处理。如果值为 scroll，不论是否需要，用户代理都会提供一种滚动机制。因此，有可能即使元素框中可以放下所有内容也会出现滚动条。</p>
+	</div>
+
+	<div class="size overflow-x-scroll">
+		<p>所有主流浏览器都支持 overflow 属性。这个属性定义溢出元素内容区的内容会如何处理。如果值为 scroll，不论是否需要，用户代理都会提供一种滚动机制。因此，有可能即使元素框中可以放下所有内容也会出现滚动条。</p>
+	</div>
+</body>
+</html>
